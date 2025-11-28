@@ -95,6 +95,7 @@ func average(arr []float64) float64 {
 //}
 
 // Nonlocal variables -> closures
+/*
 func makeEvenGenerator() func() uint {
 	i := uint(0)
 	return func() (ret uint) {
@@ -110,3 +111,19 @@ func main() {
 	fmt.Println(nextEven())
 	fmt.Println(nextEven())
 }
+*/
+
+// Recursion
+func factorial(x uint) uint {
+	if x == 0 {
+		return 1
+	}
+	return x * factorial(x-1)
+}
+
+func main() {
+	fmt.Println(factorial(15))
+}
+
+// They both are known as functional programming
+// Recursion and closures
